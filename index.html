@@ -24,10 +24,13 @@
     <div id="container">
       <h1 id="title">Jogo de Adivinhação</h1>
       <p id="output">Adivinhe o número sorteado</p>
-      <span id="attempts">Tentativa: <span id="attempts-number">0</span></span>
+      <span id="attempts">Tentativas: <span id="attempts-number">0</span></span>
+      <div id="last-kick-container" class="hide">
+        <span id="last-kick">Último chute: <span id="last-kick-value">0</span></span>
+      </div>
       <div id="input-container">
         <label for="kicks-input">Chute um número entre 1 e <span id="max-value">100</span></label>
-        <input type="number" id="kicks-input" autocomplete="off" min="1" max="100" value="1" />
+        <input type="number" id="kicks-input" autocomplete="off" min="1" max="100" />
       </div>
       <button type="button" id="verify-button">Verificar</button>
     </div>

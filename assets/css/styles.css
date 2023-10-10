@@ -5,7 +5,7 @@
   --soft-black: #333;
   --container-color: #fffccc;
   --verify-button-color: #b7ffb6;
-  --attempt-number-color: #0000ff;
+  --output-color: #0000ff;
 }
 
 /* A maioria do reset de estilos está no arquivo "reset.css" */
@@ -53,8 +53,17 @@ body {
   display: block;
 }
 
-#attempts-number {
-  color: var(--attempt-number-color);
+#attempts-number,
+#last-kick-value {
+  color: var(--output-color);
+}
+
+.hide {
+  display: none;
+}
+
+#last-kick-container {
+  margin-bottom: 25px;
 }
 
 #kicks-input,
@@ -66,7 +75,9 @@ body {
   height: 2rem;
   margin: 10px 0;
   text-align: center;
-  width: 250px;
+  width: 150px;
+  border-radius: 7px;
+  border: 1px solid var(--soft-black);
 }
 
 #verify-button {

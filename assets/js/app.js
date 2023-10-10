@@ -16,8 +16,29 @@ const showSuccessMessage = () => {
   outputElement.style.color = '#00ff00';
 }
 
+const cleanInput = () => {
+  const kicksInput = document.querySelector('#kicks-input');
+
+  kicksInput.value = '';
+}
+
+const updateLastKick = (kick) => {
+  const lastKickContainer = document.querySelector('#last-kick-container');
+  const lastKickValue = document.querySelector('#last-kick-value');
+
+  lastKickContainer.classList.remove('hide');
+  lastKickValue.textContent = kick;
+}
+
 const getInput = () => {
-  return +document.querySelector('#kicks-input').value;
+  const kicksInput = document.querySelector('#kicks-input');
+  let kick = +kicksInput.value;
+
+  cleanInput();
+  kicksInput.focus();
+  updateLastKick(kick);
+
+  return kick;
 }
 
 const showTip = (kick) => {
